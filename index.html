@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurrenSee Pro - Premium Currency Converter</title>
+    <meta name="description" content="CurrenSee Pro - The ultimate currency converter app with real-time rates, offline support, and beautiful design.">
+    <meta name="keywords" content="currency converter, exchange rates, Flutter app, CurrenSee Pro">
+    <meta name="author" content="CurrenSee Pro">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zain1098.github.io/CurrenSee-APK-Update/">
+    <meta property="og:title" content="CurrenSee Pro - Premium Currency Converter">
+    <meta property="og:description" content="The ultimate currency converter app with real-time rates, offline support, and beautiful design.">
+    <meta property="og:image" content="./assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zain1098.github.io/CurrenSee-APK-Update/">
+    <meta property="twitter:title" content="CurrenSee Pro - Premium Currency Converter">
+    <meta property="twitter:description" content="The ultimate currency converter app with real-time rates, offline support, and beautiful design.">
+    <meta property="twitter:image" content="./assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-coins"></i>
+                <span>CurrenSee Pro</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#download" class="nav-link">Download</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Premium Currency Converter</span>
+                </div>
+                <h1 class="hero-title">
+                    Convert Currencies with
+                    <span class="gradient-text">Precision & Style</span>
+                </h1>
+                <p class="hero-description">
+                    Experience the most beautiful and accurate currency converter app. 
+                    Get real-time exchange rates, offline support, and a premium user experience.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="downloadBtn">
+                        <i class="fas fa-download"></i>
+                        <span>Download APK</span>
+                        <div class="btn-loading" id="btnLoading">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Currencies</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Updates</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Offline</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-preview">
+                            <div class="app-header">
+                                <div class="app-status-bar"></div>
+                                <div class="app-title">CurrenSee Pro</div>
+                            </div>
+                            <div class="converter-demo">
+                                <div class="currency-input">
+                                    <div class="currency-flag">🇺🇸</div>
+                                    <input type="text" value="100" readonly>
+                                    <div class="currency-code">USD</div>
+                                </div>
+                                <div class="swap-button">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <div class="currency-input">
+                                    <div class="currency-flag">🇪🇺</div>
+                                    <input type="text" value="92.45" readonly>
+                                    <div class="currency-code">EUR</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose CurrenSee Pro?</h2>
+                <p class="section-description">
+                    Built with Flutter for exceptional performance and beautiful design
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-description">
+                        Instant currency conversions with real-time exchange rates updated every minute.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi-slash"></i>
+                    </div>
+                    <h3 class="feature-title">Offline Support</h3>
+                    <p class="feature-description">
+                        Convert currencies even without internet connection using cached rates.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="feature-title">Beautiful Design</h3>
+                    <p class="feature-description">
+                        Modern Material Design with smooth animations and intuitive interface.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Rate History</h3>
+                    <p class="feature-description">
+                        Track exchange rate trends with interactive charts and historical data.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="feature-title">150+ Currencies</h3>
+                    <p class="feature-description">
+                        Support for major and minor world currencies with accurate rates.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p class="feature-description">
+                        Your data stays on your device. No personal information is collected.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-text">
+                    <h2 class="download-title">Ready to Get Started?</h2>
+                    <p class="download-description">
+                        Download CurrenSee Pro now and experience the best currency converter app available.
+                    </p>
+                    <div class="download-info">
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free to download</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No ads or tracking</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Regular updates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-action">
+                    <button class="btn btn-large" id="downloadBtn2">
+                        <i class="fas fa-download"></i>
+                        <span>Download Latest APK</span>
+                        <div class="btn-loading" id="btnLoading2">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                    <p class="download-note">
+                        <i class="fas fa-info-circle"></i>
+                        Latest version: <span id="latestVersion">Loading...</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-coins"></i>
+                        <span>CurrenSee Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        The ultimate currency converter app built with Flutter for exceptional performance and beautiful design.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>App</h4>
+                        <a href="#features">Features</a>
+                        <a href="#download">Download</a>
+                        <a href="#" onclick="showChangelog()">Changelog</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <a href="https://github.com/Zain1098/CurrenSee-APK-Update/issues" target="_blank">Report Issue</a>
+                        <a href="https://github.com/Zain1098/CurrenSee-APK-Update" target="_blank">GitHub</a>
+                        <a href="#" onclick="showPrivacy()">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CurrenSee Pro. Built with ❤️ using Flutter.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./config.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
