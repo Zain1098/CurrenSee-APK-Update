@@ -129,14 +129,17 @@
             gap: 10px;
             padding: 18px 36px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
+            color: white !important;
+            text-decoration: none !important;
             border-radius: 12px;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
             margin-bottom: 15px;
+            cursor: pointer;
+            border: none;
+            outline: none;
         }
 
         .download-btn:hover {
@@ -255,10 +258,12 @@
 
                 <!-- Download Button -->
                 <div class="download-section">
-                    <a href="https://raw.githubusercontent.com/Zain1098/CurrenSee-APK-Update/master/public/app-latest.apk" 
+                    <a href="https://github.com/Zain1098/CurrenSee-APK-Update/releases/download/v1.2.0/app-latest.apk" 
                        class="download-btn" 
                        id="downloadBtn"
-                       download="CurrenSee-Pro-v1.2.0.apk">
+                       download="CurrenSee-Pro-v1.2.0.apk"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         <i class="fas fa-download"></i>
                         <span>Download APK</span>
                     </a>
@@ -295,18 +300,28 @@
 
     <script>
         // Simple download tracking
-        document.getElementById('downloadBtn').addEventListener('click', function() {
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
             console.log('Download started: CurrenSee Pro APK');
             
-            // Optional: Add download tracking here
+            // Show loading state
+            this.style.opacity = '0.7';
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Downloading...</span>';
+            
+            // Reset after 2 seconds
             setTimeout(() => {
-                alert('Download started! Check your downloads folder.');
-            }, 1000);
+                this.style.opacity = '1';
+                this.innerHTML = '<i class="fas fa-download"></i><span>Download APK</span>';
+            }, 2000);
         });
 
         // Page load time
         window.addEventListener('load', function() {
             console.log('Page loaded successfully');
+            
+            // Enable download button
+            const downloadBtn = document.getElementById('downloadBtn');
+            downloadBtn.style.pointerEvents = 'auto';
+            downloadBtn.style.opacity = '1';
         });
     </script>
 </body>
