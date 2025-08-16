@@ -79,12 +79,9 @@
                     Get real-time exchange rates, offline support, and a premium user experience.
                 </p>
                 <div class="hero-actions">
-                    <a href="/app-latest.apk" class="btn btn-primary" id="downloadBtn" download="CurrenSee-Pro.apk">
+                    <a href="/app-latest.apk" class="btn btn-primary download-btn" id="downloadBtn" download="CurrenSee-Pro.apk" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
                         <i class="fas fa-download"></i>
                         <span>Download APK</span>
-                        <div class="btn-loading" id="btnLoading">
-                            <div class="spinner"></div>
-                        </div>
                     </a>
                     <div class="hero-stats">
                         <div class="stat">
@@ -230,12 +227,9 @@
                     </div>
                 </div>
                 <div class="download-action">
-                    <a href="/app-latest.apk" class="btn btn-large" id="downloadBtn2" download="CurrenSee-Pro.apk">
+                    <a href="/app-latest.apk" class="btn btn-large download-btn" id="downloadBtn2" download="CurrenSee-Pro.apk" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 20px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 16px; font-weight: 600; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);">
                         <i class="fas fa-download"></i>
                         <span>Download Latest APK</span>
-                        <div class="btn-loading" id="btnLoading2">
-                            <div class="spinner"></div>
-                        </div>
                     </a>
                     <p class="download-note">
                         <i class="fas fa-info-circle"></i>
@@ -283,6 +277,15 @@
     <!-- Scripts -->
     <script src="./config.js"></script>
     <script src="./js/app.js"></script>
+    <style>
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6) !important;
+        }
+        .download-btn:active {
+            transform: translateY(0);
+        }
+    </style>
 </body>
 </html>
 
